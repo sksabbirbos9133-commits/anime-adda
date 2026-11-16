@@ -1060,7 +1060,7 @@
         /* কুইজ গেমের মতোই: একই Firebase প্রজেক্ট, সবার পোস্ট সবার কাছে যায়। */
         var FIREBASE_CONFIG = {"apiKey": "AIzaSyCrrg-9M6hLzlwH1o3hJbKq2Zv7y8s6wY", "authDomain": "sabbir-anime-list.firebaseapp.com", "projectId": "sabbir-anime-list", "storageBucket": "sabbir-anime-list.firebasestorage.app", "messagingSenderId": "86374734176", "appId": "1:86374734176:web:b03ebbb19ae36289fee605"};
         var FB_APP = null, FB_AUTH = null, FB_DB = null, FB_USER = null;
-        var FB_ONLINE = false, seedAttempted = false;
+        var FB_ONLINE = false, seedAttempted = false, seedTries = 0, seedDone = false;
         var OWNER_EMAIL = "sksabbirbos9133@gmail.com";
         function isOwner() { return !!(FB_USER && FB_USER.email && FB_USER.email.toLowerCase() === OWNER_EMAIL); }
 
@@ -1134,30 +1134,41 @@
         }
 
         function seedIfEmpty(snap) {
-          if (seedAttempted || !snap.empty) return;
+          if (seedAttempted || seedDone || !snap.empty) return;
           seedAttempted = true;
+          trySeed();
+        }
+        function trySeed() {
           var metaRef = FB_DB.collection("forum_meta").doc("seeded");
           FB_DB.runTransaction(function (tx) {
             return tx.get(metaRef).then(function (doc) {
               if (doc.exists) return;
               tx.set(metaRef, { at: firebase.firestore.FieldValue.serverTimestamp(), v: 1 });
               seed.forEach(function (t, ti) {
+                /* নিয়ম মেনে লিখতে হয়: নতুন টপিক/মন্তব্যে likes সবসময় 0 আর
+                   pinned সবসময় false হতে হয় — তাই বীজের সংখ্যাগুলো (48/67/89…)
+                   Firestore-এ লেখা যায় না; অফলাইন ফলব্যাকে ওগুলো আগের মতোই দেখায়। */
                 tx.set(FB_DB.collection("forum_topics").doc(t.id), {
                   title: t.title, body: t.body, cat: t.cat, spoiler: t.spoiler,
-                  pinned: t.pinned, author: t.author, av: t.av, likes: t.likes, time: t.time,
+                  pinned: false, author: t.author, av: t.av, likes: 0, time: t.time,
                   createdAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
                 t.comments.forEach(function (cm, ci) {
                   tx.set(FB_DB.collection("forum_comments").doc(t.id + "_" + ci), {
                     topicId: t.id, author: cm.author, av: cm.av, text: cm.text,
-                    likes: cm.likes, time: cm.time,
+                    likes: 0, time: cm.time,
                     createdAt: firebase.firestore.FieldValue.serverTimestamp()
                   });
                 });
               });
               tx.set(FB_DB.collection("forum_polls").doc("weekly"), { q: seedPoll.q, options: seedPoll.options });
             });
-          }).catch(function () {});
+          }).then(function () { seedDone = true; }).catch(function (e) {
+            if (window.console && console.error) console.error("seed failed:", e && e.message ? e.message : e);
+            seedAttempted = false;
+            seedTries++;
+            if (seedTries < 3) setTimeout(function () { if (!seedDone) { seedAttempted = true; trySeed(); } }, 5000);
+          });
         }
 
         function rebuildFromFb() {
