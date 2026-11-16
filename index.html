@@ -1372,7 +1372,7 @@
 
         /* ================= Firebase: শেয়ার্ড বোর্ড ================= */
         /* কুইজ গেমের মতোই: একই Firebase প্রজেক্ট, সবার পোস্ট সবার কাছে যায়। */
-        var FIREBASE_CONFIG = {"apiKey": "AIzaSyCrrg-9M6hLzlwH1o3hJbKq2Zv7y8s6wY", "authDomain": "sabbir-anime-list.firebaseapp.com", "projectId": "sabbir-anime-list", "storageBucket": "sabbir-anime-list.firebasestorage.app", "messagingSenderId": "86374734176", "appId": "1:86374734176:web:b03ebbb19ae36289fee605"};
+        var FIREBASE_CONFIG = {"apiKey": "AIzaSyD6Mwtedyrn5Za9Otl5PWp-FVfoAhi1mqw", "authDomain": "sabbir-anime-list.firebaseapp.com", "projectId": "sabbir-anime-list", "storageBucket": "sabbir-anime-list.firebasestorage.app", "messagingSenderId": "86374734176", "appId": "1:86374734176:web:b03ebbb19ae36289fee605"};
         var FB_APP = null, FB_AUTH = null, FB_DB = null, FB_USER = null;
         var FB_ONLINE = false, pollSeeded = false, debateSeeded = false;
         var OWNER_EMAIL = "sksabbirbos9133@gmail.com";
@@ -1670,7 +1670,7 @@
           }).catch(function (e) {
             if (e && e.code === "auth/operation-not-allowed") showLoginErr("ইমেইল লগইন এখনো চালু হয়নি — একটু পরে চেষ্টা করো।");
             else if (e && e.code === "auth/invalid-email") showLoginErr("সঠিক ইমেইল ঠিকানাটা লেখো।");
-            else showLoginErr("লিংক পাঠানো যায়নি — ইন্টারনেট দেখে আবার চেষ্টা করো।");
+            else showLoginErr("লিংক পাঠানো যায়নি (" + (e && e.code ? e.code : "অজানা") + ") — আবার চেষ্টা করো।");
           });
         });
         $("googleLoginBtn").addEventListener("click", function () {
