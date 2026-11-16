@@ -404,6 +404,62 @@
         .poll-fill, .toast, .btn { transition: none; }
       }
       .mini-del { background: none; border: 0; color: var(--accent); font-size: 13px; padding: 2px 0; cursor: pointer; }
+      .verified { color: var(--teal); font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+      .login-note { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 14px; line-height: 1.6; }
+      .or-div { display: flex; align-items: center; gap: 10px; color: var(--ink-faint); font-size: 13.5px; margin: 16px 0; }
+      .or-div::before, .or-div::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
+      .verified { color: var(--teal); font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+      .login-note { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 14px; line-height: 1.6; }
+      /* ---------- সেকশন ট্যাব ---------- */
+      .view-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+      .view-tab { flex: 1 1 auto; border: 1.5px solid var(--line-strong); background: var(--surface); color: var(--ink-soft); border-radius: 999px; padding: 7px 12px; font-size: 14.5px; font-weight: 700; min-height: 2.25rem; }
+      .view-tab[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+      @media (prefers-color-scheme: dark) { .view-tab[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #221a08; } }
+      .sort-sel { border: 1.5px solid var(--line-strong); background: var(--surface); color: var(--ink-soft); border-radius: 999px; padding: 5px 10px; font-size: 14px; font-weight: 600; min-height: 2.25rem; flex: none; }
+      /* ---------- স্পয়লার ব্লার (||...||) ---------- */
+      .sp { background: var(--ink); color: transparent; border-radius: 3px; cursor: pointer; user-select: none; padding: 0 4px; }
+      .sp.on { background: var(--accent-soft); color: var(--ink); user-select: text; }
+      /* ---------- আপভোট ---------- */
+      .up-btn { display: inline-flex; align-items: center; gap: 6px; border: 1.5px solid var(--line-strong); background: var(--surface-2); border-radius: 999px; padding: 4px 13px; font-size: 14px; font-weight: 700; color: var(--ink-soft); }
+      .up-btn[aria-pressed="true"] { background: var(--gold-soft); border-color: var(--gold); color: #7a4d06; }
+      @media (prefers-color-scheme: dark) { .up-btn[aria-pressed="true"] { color: var(--gold); } }
+      /* ---------- অ্যানিমে ডাটাবেস ---------- */
+      .anime-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+      .anime-card { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+      .anime-poster { padding: 14px; color: #fff; min-height: 104px; display: flex; flex-direction: column; justify-content: flex-end; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
+      .anime-poster h3 { font-size: 17px; color: #fff; }
+      .anime-poster small { opacity: .92; font-size: 13px; }
+      .anime-body { padding: 12px 14px; font-size: 14.5px; color: var(--ink-soft); }
+      .anime-body p { margin: 0 0 6px; }
+      .anime-body select { width: 100%; border: 1.5px solid var(--line-strong); background: var(--surface-2); color: var(--ink); border-radius: 10px; padding: 7px 10px; font-size: 14.5px; font-weight: 600; margin-top: 6px; }
+      /* ---------- প্রোফাইল ---------- */
+      .badge { display: inline-block; background: var(--gold-soft); color: #7a4d06; border: 1.5px solid var(--line-strong); border-radius: 999px; padding: 2px 12px; font-size: 13.5px; font-weight: 700; margin: 0 6px 6px 0; }
+      @media (prefers-color-scheme: dark) { .badge { color: var(--gold); } }
+      .wl-group { margin-bottom: 14px; }
+      .wl-group h3 { font-size: 16px; margin-bottom: 6px; }
+      .comment.reply { margin-left: 24px; }
+      .reply-note { font-size: 13.5px; color: var(--ink-faint); margin: 0 0 8px; }
+      .reply-note button { background: none; border: 0; color: var(--accent-deep); font-weight: 700; padding: 0; font-size: 13.5px; }
+      /* ---------- ফোন-প্রথম: ছোট স্ক্রিনে কমপ্যাক্ট ---------- */
+      html, body { overflow-x: clip; }
+      @media (max-width: 640px) {
+        .wrap { padding: 0 14px; }
+        .hero img.banner { height: clamp(120px, 30vw, 170px); }
+        .hero-inner { margin-top: -64px; padding-bottom: 16px; }
+        .hero h1 { font-size: 25px; }
+        .hero p.lede { font-size: 14.5px; }
+        .hero-stats { margin-top: 12px; font-size: 13.5px; gap: 6px 16px; }
+        .hero-actions { margin-top: 14px; }
+        .hero-actions .btn { flex: 1 1 auto; justify-content: center; padding: 9px 14px; font-size: 14.5px; }
+        .layout { padding-top: 18px; gap: 20px; padding-bottom: 40px; }
+        .section-head h2 { font-size: 20px; }
+        .topic { padding: 14px 15px; }
+        .thread-card { padding: 16px; }
+        .thread-card h2 { font-size: 21px; }
+        .modal { padding: 18px; }
+        .anime-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+        .comment.reply { margin-left: 16px; }
+      }
       #syncStatus { font-size: 13.5px; opacity: .85; }
     </style>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -443,6 +499,11 @@
           <button class="btn btn-ink" id="openNewSide" type="button" style="flex:none">＋ নতুন টপিক</button>
         </div>
         <div class="chips" id="catChips" role="group" aria-label="ক্যাটাগরি"></div>
+        <div class="view-tabs" id="viewTabs" role="tablist" aria-label="সেকশন">
+          <button class="view-tab active" type="button" data-view="forum" aria-pressed="true">আলোচনা</button>
+          <button class="view-tab" type="button" data-view="anime" aria-pressed="false">অ্যানিমে ডাটাবেস</button>
+          <button class="view-tab" type="button" data-view="me" aria-pressed="false">প্রোফাইল</button>
+        </div>
       </div>
     </div>
 
@@ -452,11 +513,17 @@
         <div class="section-head">
           <h2 id="listTitle">সব আলোচনা</h2>
           <span class="count bn-num" id="listCount"></span>
+          <select id="sortSel" class="sort-sel" aria-label="সাজান">
+            <option value="hot">গরম</option>
+            <option value="new">নতুন</option>
+            <option value="top">সবচেয়ে বেশি ভোট</option>
+          </select>
         </div>
         <div class="topic-list" id="topicList"></div>
         <div class="empty" id="emptyState" hidden>
-          <p>এই খোঁজে কোনো আলোচনা পাওয়া যায়নি।</p>
-          <button class="btn btn-soft" id="clearSearch" type="button">খোঁজ মুছে সব দেখো</button>
+          <p id="emptyText">এখনো কোনো আলোচনা নেই — প্রথম আলোচনাটি তুমিই শুরু করো!</p>
+          <button class="btn btn-primary" id="emptyNewTop" type="button">＋ নতুন আলোচনা শুরু করো</button>
+          <button class="btn btn-soft" id="clearSearch" type="button" hidden>খোঁজ মুছে সব দেখো</button>
         </div>
       </section>
 
@@ -464,6 +531,11 @@
         <div class="panel">
           <h3><span class="dot"></span>সাপ্তাহিক জরিপ</h3>
           <div id="pollBox"></div>
+        </div>
+
+        <div class="panel">
+          <h3><span class="dot"></span>আজকের তর্ক</h3>
+          <div id="debateBox"></div>
         </div>
 
         <div class="panel">
@@ -483,6 +555,26 @@
         </div>
       </aside>
     </main>
+
+    <!-- ================= ANIME DATABASE ================= -->
+    <section class="wrap" id="animeView" hidden style="padding-top:26px; padding-bottom:56px">
+      <div class="section-head">
+        <h2>অ্যানিমে ডাটাবেস</h2>
+        <span class="count bn-num" id="animeCount"></span>
+      </div>
+      <div class="anime-grid" id="animeGrid"></div>
+      <div class="empty" id="animeEmpty" hidden>
+        <p>এই নামে কোনো অ্যানিমে নেই।</p>
+      </div>
+    </section>
+
+    <!-- ================= PROFILE ================= -->
+    <section class="wrap" id="profileView" hidden style="padding-top:26px; padding-bottom:56px">
+      <div class="section-head">
+        <h2>প্রোফাইল</h2>
+      </div>
+      <div id="profileBox"></div>
+    </section>
 
     <!-- ================= THREAD VIEW ================= -->
     <section class="wrap thread-view" id="threadView" aria-label="আলোচনার বিস্তারিত"></section>
@@ -528,6 +620,38 @@
       </div>
     </div>
 
+    <div class="modal-backdrop" id="loginBackdrop" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <div class="modal">
+        <div class="modal-head">
+          <h2 id="loginTitle">লগইন করো</h2>
+          <button class="icon-btn" id="closeLogin" type="button" aria-label="বন্ধ করো">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+          </button>
+        </div>
+        <div id="loginFormBox">
+          <p class="login-note" id="loginNote">ইমেইল দাও — তোমার ইমেইলে একটা লিংক যাবে। লিংকে ক্লিক করলেই লগইন হয়ে যাবে। পাসওয়ার্ড বা কোড কিছু লাগবে না।</p>
+          <p class="form-err" id="loginErr"></p>
+          <div class="field">
+            <label for="loginEmail">তোমার ইমেইল</label>
+            <input id="loginEmail" type="email" placeholder="যেমন: you@gmail.com" autocomplete="email" inputmode="email" />
+          </div>
+          <button class="btn btn-primary" type="button" id="sendLinkBtn" style="width:100%; justify-content:center">লিংক পাঠাও</button>
+          <p class="hint" id="loginSent" style="display:none; margin-top:10px">✓ লিংক পাঠানো হয়েছে! ইমেইল ইনবক্সে (প্রয়োজনে স্প্যাম ফোল্ডারেও) দেখো — লিংকে ক্লিক করলেই লগইন হবে।</p>
+          <div class="or-div"><span>অথবা</span></div>
+          <button class="btn btn-soft" type="button" id="googleLoginBtn" style="width:100%; justify-content:center">Google দিয়ে লগইন করো</button>
+        </div>
+        <div id="loginUserBox" hidden>
+          <p class="login-note">লগইন করা আছে: <b id="loginUserEmail"></b></p>
+          <div class="field">
+            <label for="displayNameInput">তোমার নাম (পোস্টে এটাই দেখাবে)</label>
+            <input id="displayNameInput" type="text" maxlength="30" placeholder="যেমন: সাব্বির" />
+          </div>
+          <button class="btn btn-primary" type="button" id="saveNameBtn" style="width:100%; justify-content:center">নাম সেভ করো</button>
+          <button class="btn btn-soft" type="button" id="logoutBtn" style="width:100%; justify-content:center; margin-top:8px">লগআউট</button>
+        </div>
+      </div>
+    </div>
+
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
@@ -559,107 +683,16 @@
 
         var AV = ["a1","a2","a3","a4","a5","a6"];
 
-        /* ---- seed: অফলাইন ফলব্যাক + প্রথমবার Firestore-এ বীজ বপনের উৎস ---- */
-        var seed = [
-          {
-            id: "t1", pinned: true, cat: "general", spoiler: false,
-            title: "স্বাগতম! নিজের পরিচয় দাও — কোন অ্যানিমে দিয়ে তোমার শুরু?",
-            author: "সাব্বির", av: "a1", time: "আজ সকাল ১০:১২",
-            body: "সবাইকে স্বাগতম বাংলা অ্যানিমে আড্ডায়! প্রথম টপিকটা পরিচিতির জন্য। কমেন্টে বলো — তুমি কোন অ্যানিমে দিয়ে দেখা শুরু করেছিলে, আর এখন কোনটা চলছে? আমার শুরুটা ছিল Naruto দিয়ে, তারপর আর থামা হয়নি।",
-            likes: 48,
-            comments: [
-              { author: "রাফি", av: "a2", time: "আজ সকাল ১০:৪০", likes: 12, text: "আমার শুরু Death Note দিয়ে। বন্ধু জোর করে প্রথম দুই পর্ব দেখিয়েছিল, তারপর এক রাতে পুরো সিরিজ শেষ! এখন Jujutsu Kaisen চলছে।" },
-              { author: "তানিয়া", av: "a3", time: "আজ সকাল ১১:০৫", likes: 9, text: "আমি শুরু করেছিলাম Your Name মুভি দিয়ে। সিনেমা দেখে কেঁদে ফেলেছিলাম। এখন ধীরে ধীরে Frieren দেখছি — একদম অন্যরকম শান্ত একটা সিরিজ।" },
-              { author: "আরিফ", av: "a4", time: "আজ দুপুর ১২:২০", likes: 6, text: "Dragon Ball Z দিয়ে ছোটবেলায় শুরু, টিভিতে ডাব দেখতাম। এখন One Piece-এ ১০০০+ পর্ব পার করে ফেলেছি।" }
-            ]
-          },
-          {
-            id: "t2", pinned: false, cat: "season", spoiler: false,
-            title: "এই সিজনে কোন অ্যানিমেটা সবচেয়ে বেশি চমক দিলো?",
-            author: "মেহেদী", av: "a2", time: "গতকাল রাত ৯:৪৫",
-            body: "প্রতি সিজনেই দু-একটা সিরিজ প্রত্যাশার চেয়ে অনেক ভালো হয়ে যায়। এই সিজনে তোমাদের কাছে কোনটা সারপ্রাইজ হিট? আমি একটা স্লাইস-অফ-লাইফ ভেবে শুরু করে এখন প্রতি সপ্তাহে পর্বের জন্য অপেক্ষা করি।",
-            likes: 23,
-            comments: [
-              { author: "নুসরাত", av: "a5", time: "গতকাল রাত ১০:১৫", likes: 7, text: "আমার কাছে এই সিজনের সারপ্রাইজ হলো যেটা নিয়ে কেউ কথাই বলছিল না শুরুতে। তৃতীয় পর্ব থেকে গল্পটা এমন মোড় নিলো যে এখন গ্রুপে সবাই এটা নিয়েই কথা বলে।" },
-              { author: "সাব্বির", av: "a1", time: "আজ সকাল ৮:৩০", likes: 4, text: "একমত। বড় নামের সিরিজগুলোর পাশাপাশি ছোট স্টুডিওর কাজগুলোও এবার দারুণ করছে। অ্যানিমেশনের মান সত্যিই বেড়েছে।" }
-            ]
-          },
-          {
-            id: "t3", pinned: false, cat: "theory", spoiler: true,
-            title: "[স্পয়লার] One Piece — শেষ দ্বীপে আসলে কী অপেক্ষা করছে বলে মনে হয়?",
-            author: "রাফি", av: "a2", time: "গতকাল বিকেল ৪:১০",
-            body: "মাঙ্গা যেদিকে যাচ্ছে, তাতে মনে হচ্ছে One Piece শুধু ধন-সম্পদ নয় — হয়তো পুরো পৃথিবীর ইতিহাস বদলে দেওয়ার মতো কিছু। তোমাদের থিওরি কী? সাবধান: কমেন্টে মাঙ্গার লেটেস্ট চ্যাপ্টারের স্পয়লার থাকতে পারে।",
-            likes: 67,
-            comments: [
-              { author: "শাকিল", av: "a6", time: "গতকাল সন্ধ্যা ৬:০২", likes: 18, text: "আমার ধারণা, আসল ধনটা হলো হারিয়ে যাওয়া শতাব্দীর সত্য। Roger হেসেছিলেন কারণ সত্যটা এত বড় যে সেটা জানলেই পৃথিবী ওলট-পালট হয়ে যাবে।" },
-              { author: "তানিয়া", av: "a3", time: "গতকাল রাত ৮:৪৭", likes: 11, text: "Joy Boy-এর প্রতিশ্রুতির সঙ্গে এটার সম্পর্ক থাকবেই। আর Luffy-এর আসল স্বপ্ন যেটা এখনো আমরা শুনিনি — সেটাই হয়তো শেষের চাবিকাঠি।" },
-              { author: "মেহেদী", av: "a2", time: "আজ সকাল ৯:১২", likes: 5, text: "থিওরি যাই হোক, Oda যেভাবে ২০ বছর আগের ছোট ছোট ইঙ্গিত এখন কাজে লাগাচ্ছেন, তাতে শেষটা যে হতাশ করবে না সেটা প্রায় নিশ্চিত।" }
-            ]
-          },
-          {
-            id: "t4", pinned: false, cat: "general", spoiler: false,
-            title: "Frieren দেখে মনে হলো — ধীরগতির গল্পও এত সুন্দর হতে পারে",
-            author: "তানিয়া", av: "a3", time: "২ দিন আগে",
-            body: "Frieren: Beyond Journey's End শেষ করলাম। কোনো বড় যুদ্ধ বা চিৎকার-চেঁচামেচি ছাড়াই একটা গল্প যে এভাবে মন ছুঁয়ে যেতে পারে, ভাবিনি। সময়, স্মৃতি আর হারিয়ে ফেলা মানুষদের নিয়ে এত নীরব একটা গল্প। যারা দেখোনি, তাদের জন্য চোখ বন্ধ করে রেকমেন্ড করছি।",
-            likes: 54,
-            comments: [
-              { author: "নুসরাত", av: "a5", time: "২ দিন আগে", likes: 14, text: "Himmel-এর চরিত্রটা অসাধারণ। সে নেই, তবু পুরো গল্পজুড়ে সে-ই আছে। প্রতিটা ফ্ল্যাশব্যাক যেন নতুন করে কাঁদায়।" },
-              { author: "আরিফ", av: "a4", time: "গতকাল সকাল ৯:৩০", likes: 8, text: "আমি অ্যাকশন-পাগল মানুষ, তবু Frieren আমাকে আটকে রেখেছে। ধীর মানে বিরক্তিকর নয় — এটা এই সিরিজ প্রমাণ করে দিয়েছে।" }
-            ]
-          },
-          {
-            id: "t5", pinned: false, cat: "spoiler", spoiler: true,
-            title: "[স্পয়লার] Attack on Titan-এর শেষটা কি ন্যায্য ছিল? — গরম বিতর্ক",
-            author: "শাকিল", av: "a6", time: "৩ দিন আগে",
-            body: "সিরিজ শেষ হওয়ার পরও এই বিতর্ক থামছে না। কেউ বলে Eren-এর সিদ্ধান্ত ছাড়া উপায় ছিল না, কেউ বলে শেষটা তাড়াহুড়ো করা। তুমি কোন দলে? যুক্তি দিয়ে বলো — শুধু 'ভালো/খারাপ' নয়, কেন সেটাও লেখো। সতর্কতা: পুরো সিরিজের স্পয়লার আছে।",
-            likes: 89,
-            comments: [
-              { author: "রাফি", av: "a2", time: "৩ দিন আগে", likes: 21, text: "শেষটা নিখুঁত না হলেও থিমের দিক থেকে ঠিক ছিল। ঘৃণার চক্রটা যে সহজে ভাঙে না, সেটাই তো পুরো গল্পের কথা। সুখের সমাপ্তি হলে সেটা মিথ্যে হতো।" },
-              { author: "তানিয়া", av: "a3", time: "২ দিন আগে", likes: 13, text: "আমি মাঝামাঝি। ধারণাটা ভালো, কিন্তু শেষের কয়েকটা পর্বে আরও সময় দেওয়া উচিত ছিল। কিছু চরিত্রের বিদায়টা খুব তাড়াতাড়ি হয়ে গেছে।" }
-            ]
-          },
-          {
-            id: "t6", pinned: false, cat: "rec", spoiler: false,
-            title: "অ্যাকশন ছাড়া ভালো অ্যানিমে সাজেস্ট করো — স্লাইস অফ লাইফ / ড্রামা",
-            author: "নুসরাত", av: "a5", time: "৩ দিন আগে",
-            body: "টানা অ্যাকশন দেখতে দেখতে ক্লান্ত। এমন কিছু সাজেস্ট করো যেখানে গল্প আর চরিত্রই আসল — স্লাইস অফ লাইফ, ড্রামা বা শান্ত ধরনের সিরিজ। এক লাইনে এটাও লিখো কেন দেখবো। আমার পক্ষ থেকে প্রথম সাজেশন: A Place Further Than the Universe — বন্ধুত্ব নিয়ে এর চেয়ে সুন্দর গল্প কম আছে।",
-            likes: 31,
-            comments: [
-              { author: "মেহেদী", av: "a2", time: "৩ দিন আগে", likes: 10, text: "March Comes in Like a Lion — বিষণ্ণতা আর মানুষের পাশে দাঁড়ানো নিয়ে অসাধারণ একটা সিরিজ। ধীরে ধীরে দেখো, তাড়াহুড়ো করো না।" },
-              { author: "তানিয়া", av: "a3", time: "২ দিন আগে", likes: 6, text: "Natsume's Book of Friends। প্রতিটা পর্ব ছোট ছোট গল্প, কিন্তু মনটা ভরে যায়। ক্লান্ত দিনের শেষে দেখার জন্য সেরা।" }
-            ]
-          },
-          {
-            id: "t7", pinned: false, cat: "manga", spoiler: false,
-            title: "মাঙ্গা পড়া শুরু করতে চাই — অ্যানিমে দেখা শেষ, এরপর কোথা থেকে ধরবো?",
-            author: "আরিফ", av: "a4", time: "৪ দিন আগে",
-            body: "পছন্দের সিরিজের অ্যানিমে শেষ, পরের সিজনের জন্য এক বছর অপেক্ষা করতে মন চায় না। মাঙ্গা ধরতে চাই কিন্তু দুটো প্রশ্ন: (১) অ্যানিমে যেখানে শেষ, মাঙ্গার কোন চ্যাপ্টার থেকে শুরু করবো বুঝবো কীভাবে? (২) একদম শুরু থেকে পড়া ভালো, নাকি মাঝখান থেকে ধরলেই চলে? অভিজ্ঞদের পরামর্শ চাই।",
-            likes: 19,
-            comments: [
-              { author: "সাব্বির", av: "a1", time: "৪ দিন আগে", likes: 9, text: "আমার নিয়ম: সিরিজটা খুব প্রিয় হলে একদম শুরু থেকে পড়ি — অ্যানিমে অনেক ছোট দৃশ্য বাদ দেয়। আর শুধু গল্প এগোনোর তাড়া থাকলে শেষ পর্বের পরের চ্যাপ্টার থেকে ধরি। সিরিজের উইকি পেজে সাধারণত লেখা থাকে অ্যানিমে কত চ্যাপ্টার পর্যন্ত কভার করেছে।" },
-              { author: "শাকিল", av: "a6", time: "৩ দিন আগে", likes: 4, text: "আরেকটা টিপস: সপ্তাহে সপ্তাহে চ্যাপ্টার পড়ার অভ্যাস হলে অপেক্ষার কষ্টটা কমে। তবে স্পয়লার থেকে বাঁচতে সোশ্যাল মিডিয়ায় সিরিজের নাম মিউট করে রাখো!" }
-            ]
-          },
-          {
-            id: "t8", pinned: false, cat: "general", spoiler: false,
-            title: "সাব নাকি ডাব? — তুমি কোন দলে আর কেন?",
-            author: "মেহেদী", av: "a2", time: "৫ দিন আগে",
-            body: "চিরকালের বিতর্কটা এখানেও হোক। আমি নিজে সাব দলের — জাপানি ভয়েস অ্যাক্টিংয়ের আবেগটা ডাবে সবসময় পাই না। তবে ডাবের সুবিধাও মানি: স্ক্রিনে চোখ রেখে অ্যাকশন উপভোগ করা যায়। তোমাদের মত কী?",
-            likes: 42,
-            comments: [
-              { author: "তানিয়া", av: "a3", time: "৫ দিন আগে", likes: 8, text: "সাব, একশো ভাগ। বিশেষ করে আবেগের দৃশ্যে মূল কণ্ঠের অভিনয়টাই আসল। তবে নতুনদের জন্য ডাব দিয়ে শুরু করা খারাপ না — মূল কথা হলো দেখা শুরু করা।" },
-              { author: "আরিফ", av: "a4", time: "৪ দিন আগে", likes: 5, text: "খেতে খেতে বা কাজের ফাঁকে দেখলে ডাব সুবিধাজনক, স্বীকার করি। কিন্তু প্রিয় সিরিজ হলে অবশ্যই সাব।" }
-            ]
-          }
-        ];
+        /* ---- জরিপের ডিফল্ট: একই প্রশ্ন, শূন্য ভোট (কোনো ভুয়া ভোট নেই) ---- */
+        /* বোর্ড খালি থেকে শুরু হয় — কোনো বীজ পোস্ট নেই; সবার পোস্ট নতুন করে আসবে। */
 
         var seedPoll = {
           q: "তোমার মতে সর্বকালের সেরা অ্যানিমে কোনটি?",
           options: [
-            { label: "One Piece", votes: 14 },
-            { label: "Attack on Titan", votes: 11 },
-            { label: "Fullmetal Alchemist: Brotherhood", votes: 9 },
-            { label: "Naruto Shippuden", votes: 7 }
+            { label: "One Piece", votes: 0 },
+            { label: "Attack on Titan", votes: 0 },
+            { label: "Fullmetal Alchemist: Brotherhood", votes: 0 },
+            { label: "Naruto Shippuden", votes: 0 }
           ],
           voted: -1
         };
@@ -680,17 +713,8 @@
         function rememberName(n) { try { localStorage.setItem(NAME_KEY, n); } catch (e) {} }
 
         function seedToLocal() {
-          return seed.map(function (t) {
-            var c = {
-              id: t.id, pinned: t.pinned, cat: t.cat, spoiler: t.spoiler,
-              title: t.title, author: t.author, av: t.av, time: t.time, body: t.body,
-              baseLikes: t.likes, likes: t.likes, comments: []
-            };
-            c.comments = t.comments.map(function (cm, i) {
-              return { id: t.id + ":" + i, author: cm.author, av: cm.av, time: cm.time, baseLikes: cm.likes, likes: cm.likes, text: cm.text };
-            });
-            return c;
-          });
+          /* খালি বোর্ড: অফলাইনেও কোনো পুরোনো পোস্ট দেখায় না। */
+          return [];
         }
 
         var topics = seedToLocal();
@@ -704,8 +728,34 @@
           if (!isNaN(pv0) && pv0 >= 0 && pv0 < poll.options.length) poll.voted = pv0;
         } catch (e) {}
 
-        var state = { cat: "all", query: "", openId: null };
+        var state = { cat: "all", query: "", openId: null, view: "forum", sort: "hot", replyTo: null };
         var likedTopics = {}, likedComments = {};
+
+        /* ---- অ্যানিমে ডাটাবেস (শুধু রেফারেন্স তথ্য — পোস্ট নয়) ---- */
+        var ANIME_DB = [
+          { id: 0, n: "Attack on Titan", jp: "Shingeki no Kyojin", g: "অ্যাকশন, ড্রামা", ep: 87, st: "Wit, MAPPA", r: 9.0, h: 350 },
+          { id: 1, n: "Death Note", jp: "Desu Noto", g: "থ্রিলার", ep: 37, st: "Madhouse", r: 8.6, h: 270 },
+          { id: 2, n: "Fullmetal Alchemist: Brotherhood", jp: "Hagane no Renkinjutsushi", g: "অ্যাডভেঞ্চার", ep: 64, st: "Bones", r: 9.1, h: 30 },
+          { id: 3, n: "Your Name", jp: "Kimi no Na wa", g: "রোমান্স, ফ্যান্টাসি", ep: 1, st: "CoMix Wave", r: 8.4, h: 195 },
+          { id: 4, n: "One Piece", jp: "Wan Pisu", g: "অ্যাডভেঞ্চার", ep: 1100, st: "Toei", r: 8.7, h: 210 },
+          { id: 5, n: "Spy x Family", jp: "Supai Famirii", g: "কমেডি, অ্যাকশন", ep: 37, st: "Wit, CloverWorks", r: 8.5, h: 150 }
+        ];
+        var WL_STATUS = ["দেখছি", "দেখব", "শেষ করেছি", "ছেড়ে দিয়েছি"];
+        var DEBATE_Q = "সেরা শোনেন অ্যানিমে কোনটা?";
+        var DEBATE_OPTS = ["নারুতো", "ড্রাগন বল", "ব্লিচ", "ওয়ান পিস"];
+        var watchlist = {};
+        try { watchlist = JSON.parse(localStorage.getItem("adda_watchlist") || "{}") || {}; } catch (e) { watchlist = {}; }
+        function saveWatchlistLocal() { try { localStorage.setItem("adda_watchlist", JSON.stringify(watchlist)); } catch (e) {} }
+        var debate = { q: DEBATE_Q, options: DEBATE_OPTS.map(function (o) { return { label: o, votes: 0 }; }), voted: -1 };
+        try {
+          var dv0 = parseInt(localStorage.getItem("adda_debate_voted") || "-1", 10);
+          if (!isNaN(dv0) && dv0 >= 0 && dv0 < debate.options.length) debate.voted = dv0;
+        } catch (e) {}
+
+        /* ---- স্পয়লার ফরম্যাট: ||...|| ঢাকা অংশ (ট্যাপে খোলে) ---- */
+        function fmt(s) {
+          return esc(s).replace(/\|\|([^|]+)\|\|/g, '<span class="sp">$1</span>').replace(/\n/g, "<br>");
+        }
 
         var $ = function (id) { return document.getElementById(id); };
         var topicList = $("topicList"), chipsBox = $("catChips");
@@ -734,7 +784,8 @@
 
         /* ----- topic list ----- */
         function excerpt(body) {
-          return body.length > 120 ? body.slice(0, 120).trim() + "…" : body;
+          var clean = body.replace(/\|\|/g, "");
+          return clean.length > 120 ? clean.slice(0, 120).trim() + "…" : clean;
         }
         function filtered() {
           var q = state.query.trim().toLowerCase();
@@ -745,7 +796,12 @@
             return hay.indexOf(q) !== -1;
           }).sort(function (a, b) {
             if (a.pinned !== b.pinned) return a.pinned ? -1 : 1;
-            return (b.likes + b.comments.length * 3) - (a.likes + a.comments.length * 3);
+            if (state.sort === "new") return (b._ts || 0) - (a._ts || 0);
+            if (state.sort === "top") return (b.ups || 0) - (a.ups || 0);
+            /* গরম: ভোট বেশি + নতুন হলে উপরে */
+            var ah = ((Date.now() - (a._ts || Date.now())) / 3600000) + 2;
+            var bh = ((Date.now() - (b._ts || Date.now())) / 3600000) + 2;
+            return ((b.ups || 0) / Math.pow(bh, 1.5)) - ((a.ups || 0) / Math.pow(ah, 1.5));
           });
         }
         function renderList() {
@@ -753,8 +809,24 @@
           var catLabel = catOf(state.cat).id === "all" ? "সব আলোচনা" : catOf(state.cat).label;
           $("listTitle").textContent = state.query ? "খোঁজের ফলাফল" : catLabel;
           $("listCount").textContent = bn(list.length) + "টি টপিক";
-          $("emptyState").hidden = list.length > 0;
-          topicList.innerHTML = list.map(function (t) {
+          var es = $("emptyState");
+          es.hidden = list.length > 0;
+          if (list.length === 0) {
+            if (state.query) {
+              $("emptyText").textContent = "এই খোঁজে কোনো আলোচনা পাওয়া যায়নি।";
+              $("clearSearch").hidden = false; $("emptyNewTop").hidden = true;
+            } else {
+              $("emptyText").textContent = "এখনো কোনো আলোচনা নেই — প্রথম আলোচনাটি তুমিই শুরু করো!";
+              $("clearSearch").hidden = true; $("emptyNewTop").hidden = false;
+            }
+          }
+          var animeHit = "";
+          if (state.query) {
+            var aq = state.query.trim().toLowerCase();
+            var hits = ANIME_DB.filter(function (a) { return (a.n + " " + a.jp).toLowerCase().indexOf(aq) !== -1; });
+            if (hits.length) animeHit = '<div class="topic" style="border-style:dashed"><p style="margin:0">অ্যানিমে ডাটাবেসে মিলেছে: <b>' + hits.map(function (a) { return esc(a.n); }).join(", ") + '</b></p><button type="button" class="btn btn-soft" id="goAnimeBtn" style="margin-top:8px">ডাটাবেসে দেখো</button></div>';
+          }
+          topicList.innerHTML = animeHit + list.map(function (t) {
             var c = catOf(t.cat);
             return '<article class="topic">' +
               '<div class="topic-top">' +
@@ -765,7 +837,8 @@
               '<h3><a href="#" data-open="' + t.id + '">' + esc(t.title) + '</a></h3>' +
               '<p class="excerpt">' + esc(excerpt(t.body)) + '</p>' +
               '<div class="topic-meta">' +
-                '<span class="who">লিখেছেন <b>' + esc(t.author) + '</b></span>' +
+                '<button type="button" class="up-btn" data-up="' + t.id + '" aria-pressed="' + (!!myUpvotes[t.id]) + '">▲ <span class="bn-num">' + bn(t.ups || 0) + '</span></button>' +
+                '<span class="who">লিখেছেন <b>' + esc(t.author) + '</b>' + (t.verified ? ' <span class="verified">✓ যাচাইকৃত</span>' : '') + '</span>' +
                 '<span>' + esc(t.time) + '</span>' +
                 '<span class="stat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span class="bn-num">' + bn(t.comments.length) + '</span> মন্তব্য</span>' +
                 '<span class="stat"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.4h4c.9-1.3 2.3-2.4 4.3-2.4 3.4 0 5.3 3.6 3.7 6.7C19.5 16.4 12 21 12 21z" fill="none"/></svg><span class="bn-num">' + bn(t.likes) + '</span></span>' +
@@ -775,13 +848,18 @@
           topicList.querySelectorAll("[data-open]").forEach(function (a) {
             a.addEventListener("click", function (e) { e.preventDefault(); openThread(a.getAttribute("data-open")); });
           });
+          topicList.querySelectorAll("[data-up]").forEach(function (b) {
+            b.addEventListener("click", function () { toggleUpvote(b.getAttribute("data-up")); });
+          });
+          var gab = $("goAnimeBtn");
+          if (gab) gab.addEventListener("click", function () { setView("anime"); });
           renderHot();
         }
 
         /* ----- hot list ----- */
         function renderHot() {
           var hot = topics.slice().sort(function (a, b) {
-            return (b.likes + b.comments.length * 3) - (a.likes + a.comments.length * 3);
+            return ((b.ups || 0) + b.likes + b.comments.length * 3) - ((a.ups || 0) + a.likes + a.comments.length * 3);
           }).slice(0, 4);
           $("hotList").innerHTML = hot.map(function (t) {
             return '<li><a href="#" data-open="' + t.id + '">' + esc(t.title) + '</a>' +
@@ -820,11 +898,17 @@
               var voteRef = FB_DB.collection("forum_poll_votes").doc(deviceId);
               FB_DB.runTransaction(function (tx) {
                 return tx.get(ref).then(function (doc) {
-                  if (!doc.exists) return;
-                  var opts = doc.data().options.slice();
-                  if (!opts[i]) return;
-                  opts[i] = { label: opts[i].label, votes: (opts[i].votes || 0) + 1 };
-                  tx.update(ref, { options: opts });
+                  if (!doc.exists) {
+                    /* জরিপের ডক এখনো নেই — শূন্য ভোটে তৈরি করে এই ভোটটাই গণনা করো। */
+                    var opts0 = poll.options.map(function (o) { return { label: o.label, votes: 0 }; });
+                    opts0[i] = { label: opts0[i].label, votes: 1 };
+                    tx.set(ref, { q: poll.q, options: opts0 });
+                  } else {
+                    var opts = doc.data().options.slice();
+                    if (!opts[i]) return;
+                    opts[i] = { label: opts[i].label, votes: (opts[i].votes || 0) + 1 };
+                    tx.update(ref, { options: opts });
+                  }
                   tx.set(voteRef, { option: i, at: firebase.firestore.FieldValue.serverTimestamp() });
                 });
               }).then(function () {
@@ -847,6 +931,30 @@
             '<svg width="15" height="15" viewBox="0 0 24 24" fill="' + (liked ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.6 2.3 5 5.7 5c2 0 3.4 1.1 4.3 2.4h4c.9-1.3 2.3-2.4 4.3-2.4 3.4 0 5.3 3.6 3.7 6.7C19.5 16.4 12 21 12 21z"/></svg>' +
             '<span class="bn-num">' + bn(count) + '</span> লাইক</button>';
         }
+        function commentHtml(cm, isReply) {
+          return '<div class="comment' + (isReply ? ' reply' : '') + '"><span class="avatar ' + cm.av + '">' + initial(cm.author) + '</span><div style="min-width:0">' +
+            '<div class="c-head"><b>' + esc(cm.author) + '</b>' + (cm.verified ? ' <span class="verified">✓ যাচাইকৃত</span>' : '') + '<span>' + esc(cm.time) + '</span></div>' +
+            '<p>' + fmt(cm.text) + '</p>' +
+            heartBtn("comment", cm.id, cm.likes, isLiked("comment", cm.id)) +
+            (isReply ? '' : ' <button type="button" class="mini-del" data-reply-to="' + cm.id + '" data-reply-name="' + esc(cm.author) + '">রিপ্লাই</button>') +
+            (isOwner() ? ' <button type="button" class="mini-del" data-del-comment="' + cm.id + '">মুছো</button>' : '') +
+          '</div></div>';
+        }
+        function upBtn(id, count) {
+          return '<button type="button" class="up-btn" data-up="' + id + '" aria-pressed="' + (!!myUpvotes[id]) + '">▲ <span class="bn-num">' + bn(count || 0) + '</span> আপভোট</button>';
+        }
+        function toggleUpvote(id) {
+          if (!FB_ONLINE || !FB_DB) { toast("ইন্টারনেট নেই — ভোট এখন গণনা হবে না।"); return; }
+          var docId = "upvote_" + String(id).replace(/[^A-Za-z0-9_-]/g, "_") + "_" + deviceId;
+          if (myUpvotes[id]) {
+            FB_DB.collection("forum_likes").doc(docId).delete().catch(function () {});
+          } else {
+            FB_DB.collection("forum_likes").doc(docId).set({
+              kind: "upvote", target: String(id), device: deviceId,
+              createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            }).catch(function () { toast("ভোট দেওয়া যায়নি — আবার চেষ্টা করো।"); });
+          }
+        }
         function openThread(id) {
           var t = null;
           topics.forEach(function (x) { if (x.id === id) t = x; });
@@ -861,31 +969,29 @@
               '<button type="button" class="btn btn-soft" id="adminDel">🗑 টপিক মুছো</button>' +
               '</div>';
           }
+          var tops = t.comments.filter(function (cm) { return !cm.parentId; });
+          var reps = {};
+          t.comments.forEach(function (cm) { if (cm.parentId) (reps[cm.parentId] = reps[cm.parentId] || []).push(cm); });
+          var commentsHtml = t.comments.length ? tops.map(function (cm) {
+            return commentHtml(cm, false) + (reps[cm.id] || []).map(function (r) { return commentHtml(r, true); }).join("");
+          }).join("") : '<div class="empty"><p>এখনো কোনো মন্তব্য নেই — প্রথম মতামতটা তুমিই দাও!</p></div>';
           v.innerHTML =
             '<button type="button" class="back-btn" id="backBtn">← সব আলোচনায় ফিরে যাও</button>' +
             '<article class="thread-card">' +
               '<div class="topic-top"><span class="tag ' + c.cls + '">' + esc(c.tag) + '</span>' +
               (t.spoiler ? '<span class="tag tag-spoiler">স্পয়লার সতর্কতা</span>' : '') + '</div>' +
               '<h2>' + esc(t.title) + '</h2>' +
-              '<div class="author-row"><span class="avatar ' + t.av + '">' + initial(t.author) + '</span><span><b>' + esc(t.author) + '</b> · ' + esc(t.time) + '</span></div>' +
-              '<p class="thread-body">' + esc(t.body) + '</p>' +
-              '<div class="like-row">' + heartBtn("topic", t.id, t.likes, isLiked("topic", t.id)) +
+              '<div class="author-row"><span class="avatar ' + t.av + '">' + initial(t.author) + '</span><span><b>' + esc(t.author) + '</b>' + (t.verified ? ' <span class="verified">✓ যাচাইকৃত</span>' : '') + ' · ' + esc(t.time) + '</span></div>' +
+              '<p class="thread-body">' + (t.spoiler ? '<span class="sp">' + esc(t.body).replace(/\n/g, "<br>") + '</span>' : fmt(t.body)) + '</p>' +
+              '<div class="like-row">' + upBtn(t.id, t.ups) + heartBtn("topic", t.id, t.likes, isLiked("topic", t.id)) +
               '<span style="align-self:center; color:var(--ink-faint); font-size:14px"><span class="bn-num">' + bn(t.comments.length) + '</span>টি মন্তব্য</span></div>' +
               adminHtml +
             '</article>' +
             '<h3 class="comments-head">মন্তব্য (<span class="bn-num">' + bn(t.comments.length) + '</span>)</h3>' +
-            '<div id="commentList">' +
-              (t.comments.length ? t.comments.map(function (cm) {
-                return '<div class="comment"><span class="avatar ' + cm.av + '">' + initial(cm.author) + '</span><div style="min-width:0">' +
-                  '<div class="c-head"><b>' + esc(cm.author) + '</b><span>' + esc(cm.time) + '</span></div>' +
-                  '<p>' + esc(cm.text) + '</p>' +
-                  heartBtn("comment", cm.id, cm.likes, isLiked("comment", cm.id)) +
-                  (isOwner() ? ' <button type="button" class="mini-del" data-del-comment="' + cm.id + '">মুছো</button>' : '') +
-                '</div></div>';
-              }).join("") : '<div class="empty"><p>এখনো কোনো মন্তব্য নেই — প্রথম মতামতটা তুমিই দাও!</p></div>') +
-            '</div>' +
+            '<div id="commentList">' + commentsHtml + '</div>' +
             '<form class="form-card" id="commentForm" novalidate>' +
               '<h3>তোমার মতামত লেখো</h3>' +
+              '<p class="reply-note" id="replyNote" hidden>রিপ্লাই দিচ্ছো: <b></b> <button type="button" id="cancelReply">বাতিল</button></p>' +
               '<p class="form-err" id="commentErr"></p>' +
               '<div class="field"><label for="cName">তোমার নাম</label><input id="cName" type="text" maxlength="30" placeholder="যেমন: সাব্বির" /></div>' +
               '<div class="field"><label for="cText">মন্তব্য</label><textarea id="cText" maxlength="1000" placeholder="তোমার মতামত, যুক্তি বা প্রশ্ন লেখো…"></textarea></div>' +
@@ -900,6 +1006,26 @@
           v.querySelectorAll("[data-like]").forEach(function (b) {
             b.addEventListener("click", function () { toggleLike(b.getAttribute("data-like"), t); });
           });
+          v.querySelectorAll("[data-up]").forEach(function (b) {
+            b.addEventListener("click", function () { toggleUpvote(b.getAttribute("data-up")); });
+          });
+          v.querySelectorAll(".sp").forEach(function (el) {
+            el.addEventListener("click", function () { el.classList.toggle("on"); });
+          });
+          v.querySelectorAll("[data-reply-to]").forEach(function (b) {
+            b.addEventListener("click", function () {
+              state.replyTo = { id: b.getAttribute("data-reply-to"), name: b.getAttribute("data-reply-name") };
+              var rn = $("replyNote");
+              if (rn) { rn.hidden = false; var bb = rn.querySelector("b"); if (bb) bb.textContent = state.replyTo.name; }
+              var ct = $("cText"); if (ct) ct.focus();
+            });
+          });
+          var cr = $("cancelReply");
+          if (cr) cr.addEventListener("click", function () { state.replyTo = null; var rn = $("replyNote"); if (rn) rn.hidden = true; });
+          if (state.replyTo) {
+            var rn0 = $("replyNote");
+            if (rn0) { rn0.hidden = false; var bb0 = rn0.querySelector("b"); if (bb0) bb0.textContent = state.replyTo.name; }
+          }
           if (isOwner()) {
             var pb = $("adminPin");
             if (pb) pb.addEventListener("click", function () { setPinned(t.id, !t.pinned); });
@@ -925,12 +1051,16 @@
             if (!needOnline()) return;
             rememberName(name);
             $("cText").value = "";
-            FB_DB.collection("forum_comments").add({
+            var replyTo = state.replyTo; state.replyTo = null;
+            var rn2 = $("replyNote"); if (rn2) rn2.hidden = true;
+            var cData = {
               topicId: t.id, author: name,
               av: AV[(name.length + t.comments.length) % AV.length],
               text: text, likes: 0, time: "এইমাত্র",
               createdAt: firebase.firestore.FieldValue.serverTimestamp()
-            }).then(function () { toast("তোমার মন্তব্য পোস্ট হয়েছে!"); })
+            };
+            if (replyTo) cData.parentId = replyTo.id;
+            addWithVerified("forum_comments", cData).then(function () { toast("তোমার মন্তব্য পোস্ট হয়েছে!"); })
               .catch(function () { toast("মন্তব্য পোস্ট করা যায়নি — আবার চেষ্টা করো।"); });
           });
         }
@@ -975,6 +1105,7 @@
         }
         function closeThread() {
           state.openId = null;
+          state.replyTo = null;
           $("threadView").classList.remove("open");
           $("threadView").innerHTML = "";
           $("mainLayout").style.display = "";
@@ -983,10 +1114,192 @@
           document.getElementById("topics").scrollIntoView();
         }
 
+        /* ----- ভিউ বদল (আলোচনা / অ্যানিমে ডাটাবেস / প্রোফাইল) ----- */
+        function setView(v) {
+          state.view = v === "me" ? "profile" : v;
+          document.querySelectorAll("#viewTabs .view-tab").forEach(function (tab) {
+            var tv = tab.getAttribute("data-view");
+            var on = tv === v || (tv === "me" && state.view === "profile");
+            tab.classList.toggle("active", on);
+            tab.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+          $("mainLayout").style.display = state.view === "forum" ? "" : "none";
+          $("animeView").hidden = state.view !== "anime";
+          $("profileView").hidden = state.view !== "profile";
+          if (state.view === "anime") renderAnime();
+          if (state.view === "profile") renderProfile();
+          if (state.view === "forum") renderList();
+        }
+        document.querySelectorAll("#viewTabs .view-tab").forEach(function (tab) {
+          tab.addEventListener("click", function () { setView(tab.getAttribute("data-view")); });
+        });
+        var sortSelEl = $("sortSel");
+        if (sortSelEl) sortSelEl.addEventListener("change", function () { state.sort = sortSelEl.value; renderList(); });
+
+        /* ----- অ্যানিমে ডাটাবেস ----- */
+        function renderAnime() {
+          var q = state.query.trim().toLowerCase();
+          var list = ANIME_DB.filter(function (a) {
+            if (!q) return true;
+            return (a.n + " " + a.jp + " " + a.g).toLowerCase().indexOf(q) !== -1;
+          });
+          $("animeCount").textContent = bn(list.length) + "টি";
+          $("animeEmpty").hidden = list.length > 0;
+          $("animeGrid").innerHTML = list.map(function (a) {
+            var wl = watchlist[a.id];
+            return '<article class="anime-card">' +
+              '<div class="anime-poster" style="background:hsl(' + a.h + ', 70%, 45%)">' + esc(a.n.charAt(0)) + '</div>' +
+              '<div class="anime-body">' +
+                '<h3>' + esc(a.n) + '</h3>' +
+                '<p class="anime-jp">' + esc(a.jp) + '</p>' +
+                '<p class="anime-meta">★ ' + a.r.toFixed(1) + ' · ' + bn(a.ep) + ' পর্ব · ' + esc(a.st) + '</p>' +
+                '<p class="anime-genre">' + esc(a.g) + '</p>' +
+                '<label class="wl-label">আমার তালিকা' +
+                  '<select class="wl-select" data-wl="' + a.id + '">' +
+                    '<option value=""' + (wl ? '' : ' selected') + '>— বেছে নাও —</option>' +
+                    WL_STATUS.map(function (s) { return '<option value="' + s + '"' + (wl === s ? ' selected' : '') + '>' + s + '</option>'; }).join("") +
+                  '</select></label>' +
+              '</div></article>';
+          }).join("");
+          $("animeGrid").querySelectorAll("[data-wl]").forEach(function (sel) {
+            sel.addEventListener("change", function () { setWatchlist(parseInt(sel.getAttribute("data-wl"), 10), sel.value); });
+          });
+        }
+
+        /* ----- ওয়াচলিস্ট (লগইনে Firestore, অতিথিতে এই ফোনে) ----- */
+        function setWatchlist(id, status) {
+          if (status) watchlist[id] = status; else delete watchlist[id];
+          saveWatchlistLocal();
+          if (FB_USER && FB_DB) {
+            var docId = FB_USER.uid + "_" + id;
+            if (status) {
+              FB_DB.collection("forum_watchlist").doc(docId).set({
+                uid: FB_USER.uid, animeId: id, status: status,
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+              }).catch(function () {});
+            } else {
+              FB_DB.collection("forum_watchlist").doc(docId).delete().catch(function () {});
+            }
+          }
+          if (state.view === "profile") renderProfile();
+        }
+        var wlUnsub = null;
+        function loadWatchlist() {
+          if (wlUnsub) { try { wlUnsub(); } catch (e) {} wlUnsub = null; }
+          if (!FB_USER || !FB_DB) return;
+          wlUnsub = FB_DB.collection("forum_watchlist").where("uid", "==", FB_USER.uid).onSnapshot(function (snap) {
+            var wl = {};
+            snap.forEach(function (doc) { var d = doc.data(); wl[d.animeId] = d.status; });
+            watchlist = wl; saveWatchlistLocal();
+            if (state.view === "anime") renderAnime();
+            if (state.view === "profile") renderProfile();
+          }, function () {});
+        }
+
+        /* ----- প্রোফাইল ----- */
+        function myPostCount() {
+          if (!FB_USER) return 0;
+          var n = 0;
+          topics.forEach(function (t) { if (t.uid === FB_USER.uid) n++; });
+          return n;
+        }
+        function renderProfile() {
+          var box = $("profileBox");
+          if (!box) return;
+          var name = FB_USER ? (FB_USER.displayName || FB_USER.email || "লগইন করা ইউজার") : (savedName() || "অতিথি");
+          var email = FB_USER ? FB_USER.email : "";
+          var posts = myPostCount();
+          var wlCount = Object.keys(watchlist).length;
+          var finished = 0;
+          Object.keys(watchlist).forEach(function (k) { if (watchlist[k] === "শেষ করেছি") finished++; });
+          var badges = [];
+          if (posts >= 1) badges.push("প্রথম পোস্ট");
+          if (wlCount >= 3) badges.push("ওটাকু");
+          if (finished >= 2) badges.push("মারাথনার");
+          var groups = WL_STATUS.map(function (s) {
+            var items = ANIME_DB.filter(function (a) { return watchlist[a.id] === s; });
+            return '<div class="wl-group"><h4>' + s + ' <span class="bn-num">(' + bn(items.length) + ')</span></h4>' +
+              (items.length ? '<ul>' + items.map(function (a) { return '<li>' + esc(a.n) + '</li>'; }).join("") + '</ul>' : '<p class="muted">কিছু নেই।</p>') + '</div>';
+          }).join("");
+          box.innerHTML =
+            '<div class="panel profile-panel">' +
+              '<h3>' + esc(name) + '</h3>' +
+              (email ? '<p class="muted">' + esc(email) + '</p>' : '<p class="muted">লগইন করলে তোমার পোস্টে যাচাইকৃত চিহ্ন আসবে।</p>') +
+              '<p>পোস্ট: <b class="bn-num">' + bn(posts) + '</b> · ওয়াচলিস্ট: <b class="bn-num">' + bn(wlCount) + '</b></p>' +
+              '<div class="badges">' + (badges.length ? badges.map(function (b) { return '<span class="badge">🏅 ' + b + '</span>'; }).join("") : '<span class="muted">এখনো কোনো ব্যাজ নেই — পোস্ট করো বা ওয়াচলিস্ট সাজাও!</span>') + '</div>' +
+              '<label class="wl-label" style="margin-top:12px">দেখানোর নাম' +
+                '<input type="text" id="profileName" value="' + esc(savedName()) + '" maxlength="30" placeholder="তোমার নাম" /></label>' +
+              '<button type="button" class="btn btn-primary" id="saveProfileName" style="margin-top:8px">নাম সংরক্ষণ করো</button>' +
+            '</div>' +
+            '<div class="panel" style="margin-top:14px"><h3>আমার ওয়াচলিস্ট</h3>' + groups + '</div>';
+          var spn = $("saveProfileName");
+          if (spn) spn.addEventListener("click", function () {
+            var v = $("profileName").value.trim();
+            if (v.length < 2) { toast("নামটা কমপক্ষে ২ অক্ষর লেখো।"); return; }
+            rememberName(v);
+            toast("নাম সংরক্ষণ হয়েছে!");
+            renderProfile();
+          });
+        }
+
+        /* ----- আজকের তর্ক (দৈনিক বিতর্ক জরিপ) ----- */
+        function renderDebate() {
+          var box = $("debateBox");
+          if (!box) return;
+          var total = debate.options.reduce(function (s, o) { return s + o.votes; }, 0);
+          box.innerHTML = '<p class="poll-q">' + esc(debate.q) + '</p>' +
+            debate.options.map(function (o, i) {
+              var pct = total ? Math.round((o.votes / total) * 100) : 0;
+              return '<button type="button" class="poll-opt' + (debate.voted === i ? ' voted' : '') + '" data-debate="' + i + '">' +
+                '<span class="poll-opt-label">' + esc(o.label) + '</span>' +
+                '<span class="poll-opt-count bn-num">' + (debate.voted >= 0 ? bn(o.votes) + ' ভোট · ' + bn(pct) + '%' : 'ভোট দাও') + '</span>' +
+                '<span class="poll-bar"><i style="width:' + pct + '%"></i></span>' +
+              '</button>';
+            }).join("") +
+            '<p class="poll-total bn-num">' + (total ? 'মোট ' + bn(total) + ' ভোট' : 'এখনো কেউ ভোট দেয়নি — প্রথম ভোটটা তুমিই দাও!') + '</p>';
+          box.querySelectorAll("[data-debate]").forEach(function (b) {
+            b.addEventListener("click", function () { voteDebate(parseInt(b.getAttribute("data-debate"), 10)); });
+          });
+        }
+        function voteDebate(idx) {
+          if (debate.voted >= 0) { toast("তুমি আগেই ভোট দিয়েছো।"); return; }
+          if (!FB_ONLINE || !FB_DB) { toast("ইন্টারনেট নেই — ভোট এখন গণনা হবে না।"); return; }
+          var docId = deviceId + "_debate";
+          var ref = FB_DB.collection("forum_polls").doc("daily");
+          var voteRef = FB_DB.collection("forum_poll_votes").doc(docId);
+          FB_DB.runTransaction(function (tx) {
+            return tx.get(ref).then(function (doc) {
+              if (!doc.exists) {
+                /* তর্কের ডক এখনো নেই — শূন্য ভোটে তৈরি করে এই ভোটটাই গণনা করো। */
+                var opts0 = debate.options.map(function (o) { return { label: o.label, votes: 0 }; });
+                opts0[idx] = { label: opts0[idx].label, votes: 1 };
+                tx.set(ref, { q: debate.q, options: opts0 });
+              } else {
+                var opts = doc.data().options.slice();
+                if (!opts[idx]) return;
+                opts[idx] = { label: opts[idx].label, votes: (opts[idx].votes || 0) + 1 };
+                tx.update(ref, { options: opts });
+              }
+              tx.set(voteRef, { option: idx, at: firebase.firestore.FieldValue.serverTimestamp() });
+            });
+          }).then(function () {
+            debate.voted = idx;
+            try { localStorage.setItem("adda_debate_voted", String(idx)); } catch (e) {}
+            renderDebate();
+            toast("তোমার ভোট গণনা হয়েছে!");
+          }).catch(function () { toast("ভোট দেওয়া যায়নি — আবার চেষ্টা করো।"); });
+        }
+        function rebuildDebateFromFb(doc) {
+          if (!doc || !doc.q) return;
+          debate.q = doc.q;
+          debate.options = doc.options.map(function (o) { return { label: o.label, votes: o.votes }; });
+          renderDebate();
+        }
+
         /* ----- search ----- */
-        $("searchInput").addEventListener("input", function (e) { state.query = e.target.value; renderList(); });
+        $("searchInput").addEventListener("input", function (e) { state.query = e.target.value; renderList(); if (state.view === "anime") renderAnime(); });
         $("clearSearch").addEventListener("click", function () {
-          state.query = ""; $("searchInput").value = ""; renderList();
+          state.query = ""; $("searchInput").value = ""; renderList(); if (state.view === "anime") renderAnime();
         });
 
         /* ----- new topic modal ----- */
@@ -1006,9 +1319,10 @@
         function closeModal() { backdrop.classList.remove("open"); }
         $("openNewTop").addEventListener("click", openModal);
         $("openNewSide").addEventListener("click", openModal);
+        $("emptyNewTop").addEventListener("click", openModal);
         $("closeModal").addEventListener("click", closeModal);
         backdrop.addEventListener("click", function (e) { if (e.target === backdrop) closeModal(); });
-        document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+        document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeModal(); closeLoginModal(); } });
 
         $("topicForm").addEventListener("submit", function (e) {
           e.preventDefault();
@@ -1021,7 +1335,7 @@
           if (!needOnline()) return;
           rememberName(name);
           var spoiler = $("fSpoiler").checked;
-          FB_DB.collection("forum_topics").add({
+          addWithVerified("forum_topics", {
             title: title, body: body,
             cat: spoiler ? "spoiler" : $("fCat").value, spoiler: spoiler,
             pinned: false, author: name, av: AV[name.length % AV.length],
@@ -1060,12 +1374,12 @@
         /* কুইজ গেমের মতোই: একই Firebase প্রজেক্ট, সবার পোস্ট সবার কাছে যায়। */
         var FIREBASE_CONFIG = {"apiKey": "AIzaSyCrrg-9M6hLzlwH1o3hJbKq2Zv7y8s6wY", "authDomain": "sabbir-anime-list.firebaseapp.com", "projectId": "sabbir-anime-list", "storageBucket": "sabbir-anime-list.firebasestorage.app", "messagingSenderId": "86374734176", "appId": "1:86374734176:web:b03ebbb19ae36289fee605"};
         var FB_APP = null, FB_AUTH = null, FB_DB = null, FB_USER = null;
-        var FB_ONLINE = false, seedAttempted = false, seedTries = 0, seedDone = false;
+        var FB_ONLINE = false, pollSeeded = false, debateSeeded = false;
         var OWNER_EMAIL = "sksabbirbos9133@gmail.com";
         function isOwner() { return !!(FB_USER && FB_USER.email && FB_USER.email.toLowerCase() === OWNER_EMAIL); }
 
         var fbTopics = {}, fbComments = {}, fbLikeDocs = {}, fbPollDoc = null;
-        var myLikeKeys = {};
+        var myLikeKeys = {}, upvoteCounts = {}, myUpvotes = {};
 
         function setSync(txt) { var el = $("syncStatus"); if (el) el.textContent = txt; }
         function goOnline() {
@@ -1081,7 +1395,9 @@
           topics = seedToLocal();
           poll.q = seedPoll.q;
           poll.options = seedPoll.options.map(function (o) { return { label: o.label, votes: o.votes }; });
-          renderStats(); renderList(); renderPoll();
+          debate.q = DEBATE_Q;
+          debate.options = DEBATE_OPTS.map(function (o) { return { label: o, votes: 0 }; });
+          renderStats(); renderList(); renderPoll(); renderDebate();
           if (state.openId) refreshOpenThread();
         }
         function needOnline() {
@@ -1098,9 +1414,14 @@
             FB_AUTH.onAuthStateChanged(function (u) {
               FB_USER = u || null;
               updateLoginBtn();
+              loadWatchlist();
               renderList();
               if (state.openId) refreshOpenThread();
             });
+            /* Google রিডাইরেক্ট থেকে ফিরলে সেশনটা এখানেই শেষ হয়। */
+            FB_AUTH.getRedirectResult().then(function (res) {
+              if (res && res.user) toast("লগইন হয়েছে!");
+            }).catch(function () { toast("লগইন হয়নি — আবার চেষ্টা করো।"); });
             return true;
           } catch (e) { return false; }
         }
@@ -1110,7 +1431,6 @@
             fbTopics = {};
             snap.forEach(function (doc) { var d = doc.data(); d._id = doc.id; fbTopics[doc.id] = d; });
             goOnline();
-            seedIfEmpty(snap);
             rebuildFromFb();
           }, function () { goOffline(); });
           FB_DB.collection("forum_comments").orderBy("createdAt", "asc").limit(500).onSnapshot(function (snap) {
@@ -1130,45 +1450,23 @@
           }, function () { goOffline(); });
           FB_DB.collection("forum_polls").doc("weekly").onSnapshot(function (doc) {
             if (doc.exists) { fbPollDoc = doc.data(); goOnline(); rebuildPollFromFb(); }
+            else if (!pollSeeded) {
+              /* জরিপের ডক না থাকলে শূন্য ভোটে তৈরি করো (একবারই)। */
+              pollSeeded = true;
+              FB_DB.collection("forum_polls").doc("weekly").set({ q: seedPoll.q, options: seedPoll.options }).catch(function () {});
+            }
           }, function () { goOffline(); });
-        }
-
-        function seedIfEmpty(snap) {
-          if (seedAttempted || seedDone || !snap.empty) return;
-          seedAttempted = true;
-          trySeed();
-        }
-        function trySeed() {
-          var metaRef = FB_DB.collection("forum_meta").doc("seeded");
-          FB_DB.runTransaction(function (tx) {
-            return tx.get(metaRef).then(function (doc) {
-              if (doc.exists) return;
-              tx.set(metaRef, { at: firebase.firestore.FieldValue.serverTimestamp(), v: 1 });
-              seed.forEach(function (t, ti) {
-                /* নিয়ম মেনে লিখতে হয়: নতুন টপিক/মন্তব্যে likes সবসময় 0 আর
-                   pinned সবসময় false হতে হয় — তাই বীজের সংখ্যাগুলো (48/67/89…)
-                   Firestore-এ লেখা যায় না; অফলাইন ফলব্যাকে ওগুলো আগের মতোই দেখায়। */
-                tx.set(FB_DB.collection("forum_topics").doc(t.id), {
-                  title: t.title, body: t.body, cat: t.cat, spoiler: t.spoiler,
-                  pinned: false, author: t.author, av: t.av, likes: 0, time: t.time,
-                  createdAt: firebase.firestore.FieldValue.serverTimestamp()
-                });
-                t.comments.forEach(function (cm, ci) {
-                  tx.set(FB_DB.collection("forum_comments").doc(t.id + "_" + ci), {
-                    topicId: t.id, author: cm.author, av: cm.av, text: cm.text,
-                    likes: 0, time: cm.time,
-                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
-                  });
-                });
-              });
-              tx.set(FB_DB.collection("forum_polls").doc("weekly"), { q: seedPoll.q, options: seedPoll.options });
-            });
-          }).then(function () { seedDone = true; }).catch(function (e) {
-            if (window.console && console.error) console.error("seed failed:", e && e.message ? e.message : e);
-            seedAttempted = false;
-            seedTries++;
-            if (seedTries < 3) setTimeout(function () { if (!seedDone) { seedAttempted = true; trySeed(); } }, 5000);
-          });
+          FB_DB.collection("forum_polls").doc("daily").onSnapshot(function (doc) {
+            if (doc.exists) { goOnline(); rebuildDebateFromFb(doc.data()); }
+            else if (!debateSeeded) {
+              /* আজকের তর্কের ডক না থাকলে শূন্য ভোটে তৈরি করো (একবারই)। */
+              debateSeeded = true;
+              FB_DB.collection("forum_polls").doc("daily").set({
+                q: DEBATE_Q,
+                options: DEBATE_OPTS.map(function (o) { return { label: o, votes: 0 }; })
+              }).catch(function () {});
+            }
+          }, function () { goOffline(); });
         }
 
         function rebuildFromFb() {
@@ -1178,7 +1476,7 @@
             var d = fbTopics[id];
             var t = {
               id: id, pinned: !!d.pinned, cat: d.cat, spoiler: !!d.spoiler,
-              title: d.title, author: d.author, av: d.av || "a1", time: d.time || "", body: d.body,
+              title: d.title, author: d.author, uid: d.uid || "", verified: !!d.verified, av: d.av || "a1", time: d.time || "", body: d.body,
               baseLikes: d.likes || 0, likes: d.likes || 0, comments: [],
               _ts: (d.createdAt && d.createdAt.toMillis) ? d.createdAt.toMillis() : 0
             };
@@ -1186,8 +1484,8 @@
               var c = fbComments[cid];
               if (c.topicId !== id) return;
               t.comments.push({
-                id: cid, author: c.author, av: c.av || "a1", time: c.time || "",
-                baseLikes: c.likes || 0, likes: c.likes || 0, text: c.text,
+                id: cid, author: c.author, verified: !!c.verified, av: c.av || "a1", time: c.time || "",
+                baseLikes: c.likes || 0, likes: c.likes || 0, text: c.text, parentId: c.parentId || null,
                 _ts: (c.createdAt && c.createdAt.toMillis) ? c.createdAt.toMillis() : 0
               });
             });
@@ -1195,6 +1493,7 @@
             list.push(t);
           });
           list.sort(function (a, b) { return b._ts - a._ts; });
+          upvoteCounts = {}; myUpvotes = {};
           Object.keys(fbLikeDocs).forEach(function (lid) {
             var l = fbLikeDocs[lid];
             var i, j, k;
@@ -1206,8 +1505,12 @@
                   if (list[j].comments[k].id === l.target) { list[j].comments[k].likes++; break; }
                 }
               }
+            } else if (l.kind === "upvote") {
+              upvoteCounts[l.target] = (upvoteCounts[l.target] || 0) + 1;
+              if (l.device === deviceId) myUpvotes[l.target] = 1;
             }
           });
+          list.forEach(function (x) { x.ups = upvoteCounts[x.id] || 0; });
           topics = list;
           renderStats(); renderList();
           if (state.openId) refreshOpenThread();
@@ -1250,19 +1553,142 @@
           FB_DB.collection("forum_topics").doc(id).update({ pinned: val }).catch(function () {});
         }
 
-        /* ----- লগইন (শুধু অ্যাডমিন সাইন-ইন করে; সাধারণ পোস্টে লগইন লাগে না) ----- */
+        /* ----- লগইন: ইমেইল-লিংক (ম্যাজিক লিংক) + Google (অ্যাডমিন) -----
+           পাসওয়ার্ড নেই, কোড নেই — ইমেইলে লিংক যায়, ক্লিক করলেই লগইন।
+           Google লগইন পপআপে চলে না (ফোনেও খোলে না), তাই রিডাইরেক্ট ব্যবহার
+           করা হয় — Google-এ গিয়ে আবার এখানেই ফিরে আসে। */
+        /* ----- যাচাইকৃত পোস্ট: লগইন থাকলে verified+uid জুড়ে দাও -----
+           নিয়মে এই দুই ফিল্ডের অনুমতি থাকলে পোস্টে ✓ যাচাইকৃত চিহ্ন আসে;
+           নিয়ম না থাকলে (permission-denied) শুধু সাধারণভাবে পোস্ট হয়। */
+        function addWithVerified(col, data) {
+          /* লগইন থাকলে verified+uid জুড়ে দাও; নিয়মে অনুমতি না থাকলে
+             (permission-denied) শুধু সাধারণভাবে পোস্ট হয় — পোস্ট আটকায় না। */
+          var plain = {};
+          Object.keys(data).forEach(function (k) { if (k !== "verified" && k !== "uid" && k !== "parentId") plain[k] = data[k]; });
+          if (!FB_USER && !data.parentId) return FB_DB.collection(col).add(data);
+          var withV = {};
+          Object.keys(data).forEach(function (k) { withV[k] = data[k]; });
+          if (FB_USER) { withV.verified = true; withV.uid = FB_USER.uid; }
+          return FB_DB.collection(col).add(withV).catch(function (e) {
+            if (e && e.code === "permission-denied") {
+              if (window.console && console.error) console.error("verified post denied, retrying plain");
+              return FB_DB.collection(col).add(plain);
+            }
+            throw e;
+          });
+        }
+
+        var EMAIL_KEY = "adda_email_for_signin";
+        var LOGIN_URL = "https://sksabbirbos9133-commits.github.io/anime-adda/";
+        var loginFinishMode = false;
+
         function updateLoginBtn() {
           var b = $("loginBtn"); if (!b) return;
-          if (FB_USER) b.textContent = "লগআউট (" + (FB_USER.displayName || FB_USER.email || "") + ")";
-          else b.textContent = "লগইন";
+          if (FB_USER) {
+            var nm = FB_USER.displayName || (FB_USER.email ? FB_USER.email.split("@")[0] : "");
+            b.textContent = "লগআউট (" + nm + ")";
+          } else b.textContent = "লগইন";
+        }
+        function setLoginNote(t) { var n = $("loginNote"); if (n) n.textContent = t; }
+        function showLoginErr(t) { var e = $("loginErr"); if (!e) return; e.textContent = t; e.classList.toggle("show", !!t); }
+        function openLoginModal() { syncLoginModal(); $("loginBackdrop").classList.add("open"); }
+        function closeLoginModal() { $("loginBackdrop").classList.remove("open"); }
+        function syncLoginModal() {
+          var logged = !!FB_USER;
+          $("loginFormBox").hidden = logged;
+          $("loginUserBox").hidden = !logged;
+          if (logged) {
+            $("loginUserEmail").textContent = FB_USER.email || "";
+            var dn = $("displayNameInput");
+            if (dn && !dn.value) dn.value = savedName() || (FB_USER.email ? FB_USER.email.split("@")[0] : "");
+          } else if (loginFinishMode) {
+            $("loginTitle").textContent = "লগইন শেষ করো";
+            setLoginNote("লিংক থেকে এসেছো — লগইন শেষ করতে তোমার ইমেইলটা লেখো।");
+            $("sendLinkBtn").textContent = "লগইন শেষ করো";
+            $("loginSent").style.display = "none";
+            showLoginErr("");
+          } else {
+            $("loginTitle").textContent = "লগইন করো";
+            setLoginNote("ইমেইল দাও — তোমার ইমেইলে একটা লিংক যাবে। লিংকে ক্লিক করলেই লগইন হয়ে যাবে। পাসওয়ার্ড বা কোড কিছু লাগবে না।");
+            $("sendLinkBtn").textContent = "লিংক পাঠাও";
+            $("loginSent").style.display = "none";
+            showLoginErr("");
+          }
+        }
+        function finishEmailSignIn(email) {
+          if (!FB_AUTH) return;
+          FB_AUTH.signInWithEmailLink(email, window.location.href).then(function () {
+            try { localStorage.removeItem(EMAIL_KEY); } catch (e) {}
+            loginFinishMode = false;
+            if (window.history && window.history.replaceState) window.history.replaceState(null, "", LOGIN_URL);
+            closeLoginModal();
+            toast("লগইন হয়েছে!");
+          }).catch(function (e) {
+            if (e && (e.code === "auth/expired-action-code" || e.code === "auth/invalid-action-code")) {
+              loginFinishMode = false; syncLoginModal();
+              showLoginErr("লিংকটা মেয়াদোত্তীর্ণ বা ভুল — নতুন লিংক পাঠাও।");
+            } else if (e && e.code === "auth/invalid-email") {
+              showLoginErr("ইমেইলটা মিলছে না — যে ইমেইলে লিংক গেছে সেটাই লেখো।");
+            } else {
+              showLoginErr("লগইন হয়নি — আবার চেষ্টা করো।");
+            }
+          });
+        }
+        function checkEmailLink() {
+          if (!FB_AUTH) return;
+          try {
+            if (FB_AUTH.isSignInWithEmailLink(window.location.href)) {
+              var email = "";
+              try { email = localStorage.getItem(EMAIL_KEY) || ""; } catch (e) {}
+              if (email) finishEmailSignIn(email);
+              else {
+                loginFinishMode = true;
+                openLoginModal();
+                var em = $("loginEmail");
+                if (em) setTimeout(function () { em.focus(); }, 60);
+              }
+            }
+          } catch (e) {}
         }
         var loginBtn = $("loginBtn");
         if (loginBtn) loginBtn.addEventListener("click", function () {
           if (!FB_AUTH) { toast("লগইন এখন হচ্ছে না — ইন্টারনেট দেখো।"); return; }
-          if (FB_USER) { FB_AUTH.signOut(); toast("লগআউট হয়েছে।"); return; }
+          openLoginModal();
+        });
+        $("closeLogin").addEventListener("click", closeLoginModal);
+        $("loginBackdrop").addEventListener("click", function (e) { if (e.target === $("loginBackdrop")) closeLoginModal(); });
+        $("sendLinkBtn").addEventListener("click", function () {
+          var email = $("loginEmail").value.trim();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showLoginErr("সঠিক ইমেইল ঠিকানাটা লেখো।"); return; }
+          showLoginErr("");
+          if (!FB_AUTH) { showLoginErr("ইন্টারনেট সংযোগ নেই — সংযোগ ফিরলে আবার চেষ্টা করো।"); return; }
+          if (loginFinishMode) { finishEmailSignIn(email); return; }
+          FB_AUTH.sendSignInLinkToEmail(email, { url: LOGIN_URL, handleCodeInApp: true }).then(function () {
+            try { localStorage.setItem(EMAIL_KEY, email); } catch (e) {}
+            $("loginSent").style.display = "block";
+            toast("লিংক পাঠানো হয়েছে — ইমেইল দেখো।");
+          }).catch(function (e) {
+            if (e && e.code === "auth/operation-not-allowed") showLoginErr("ইমেইল লগইন এখনো চালু হয়নি — একটু পরে চেষ্টা করো।");
+            else if (e && e.code === "auth/invalid-email") showLoginErr("সঠিক ইমেইল ঠিকানাটা লেখো।");
+            else showLoginErr("লিংক পাঠানো যায়নি — ইন্টারনেট দেখে আবার চেষ্টা করো।");
+          });
+        });
+        $("googleLoginBtn").addEventListener("click", function () {
+          if (!FB_AUTH) { showLoginErr("ইন্টারনেট সংযোগ নেই — সংযোগ ফিরলে আবার চেষ্টা করো।"); return; }
           var provider = new firebase.auth.GoogleAuthProvider();
-          FB_AUTH.signInWithPopup(provider).then(function () { toast("লগইন হয়েছে!"); })
-            .catch(function () { toast("লগইন হয়নি — আবার চেষ্টা করো।"); });
+          FB_AUTH.signInWithRedirect(provider);
+        });
+        $("saveNameBtn").addEventListener("click", function () {
+          var n = $("displayNameInput").value.trim();
+          if (n.length < 2) { showLoginErr("নামটা কমপক্ষে ২ অক্ষরের হতে হবে।"); return; }
+          rememberName(n);
+          showLoginErr("");
+          toast("নাম সেভ হয়েছে!");
+        });
+        $("logoutBtn").addEventListener("click", function () {
+          if (FB_AUTH) FB_AUTH.signOut();
+          closeLoginModal();
+          toast("লগআউট হয়েছে।");
         });
 
         /* ----- boot ----- */
@@ -1270,6 +1696,7 @@
         renderStats();
         renderList();
         renderPoll();
+        renderDebate();
         if (fbInit()) {
           setSync("সংযোগ হচ্ছে…");
           attachListeners();
@@ -1278,9 +1705,26 @@
               poll.voted = doc.data().option;
               try { localStorage.setItem("adda_poll_voted", String(poll.voted)); } catch (e) {}
               renderPoll();
+            } else if (!doc.exists) {
+              /* ভোটের রেকর্ড নেই (বোর্ড নতুন) — পুরোনো ভোটের চিহ্ন মুছে ফেলো। */
+              poll.voted = -1;
+              try { localStorage.removeItem("adda_poll_voted"); } catch (e) {}
+              renderPoll();
+            }
+          }).catch(function () {});
+          FB_DB.collection("forum_poll_votes").doc(deviceId + "_debate").get().then(function (doc) {
+            if (doc.exists && typeof doc.data().option === "number") {
+              debate.voted = doc.data().option;
+              try { localStorage.setItem("adda_debate_voted", String(debate.voted)); } catch (e) {}
+              renderDebate();
+            } else if (!doc.exists) {
+              debate.voted = -1;
+              try { localStorage.removeItem("adda_debate_voted"); } catch (e) {}
+              renderDebate();
             }
           }).catch(function () {});
           setTimeout(function () { if (!FB_ONLINE) goOffline(); }, 8000);
+          checkEmailLink();
         } else {
           goOffline();
         }
